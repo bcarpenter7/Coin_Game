@@ -1,0 +1,135 @@
+h1 {
+  font-size: 100px;
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  color: #fff;
+  background-color: #361f70;
+  height: 150px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  margin-top: -50px;
+  color: white;
+}
+h3 {
+  font-size: 40px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  margin-top: -50px;
+}
+
+p {
+  font-size: 40px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.cards {
+  opacity: 1;
+}
+
+#coinOne {
+  position: absolute;
+  left: 400px;
+  top: 300px;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+#coinTwo {
+  position: absolute;
+  left: 600px;
+  top: 300px;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+#coinThree {
+  position: absolute;
+  left: 800px;
+  top: 300px;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+.one {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 400px;
+  top: 300px;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 20;
+}
+
+.two {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 600px;
+  top: 300px;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 20;
+}
+
+.three {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 800px;
+  top: 300px;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 20;
+}
+
+#reset {
+  opacity: 0;
+}
+
+.general {
+  background: rgb(45, 44, 44);
+}
+
+.hidden {
+  display: none;
+}
+
+#high {
+  font-size: 20px;
+  position: absolute;
+  left: 1050px;
+  font-family: Helvetica, sans-serif;
+  margin-top: -75px;
+  background: white;
+  border-radius: 2%;
+}
+
+#current {
+  font-size: 20px;
+  position: absolute;
+  left: 1050px;
+  font-family: Helvetica, sans-serif;
+  margin-top: -15px;
+  background: white;
+  border-radius: 2%;
+}
+
+#reset {
+  font-size: 40px;
+  position: absolute;
+  left: 75px;
+  font-family: Helvetica, sans-serif;
+  margin-top: -75px;
+}
