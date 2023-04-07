@@ -60,7 +60,7 @@ allBtns.addEventListener('click', function () {
 //// CODE THAT PRINTS WINNER!
 btn1.addEventListener('click', function () {
   if (test === 1) {
-    str.textContent = 'Good job Sarah!';
+    str.textContent = 'Good job!';
     score++;
     currentScore.textContent = `Current Score = ${score}`;
     console.log(score);
@@ -84,7 +84,7 @@ btn1.addEventListener('click', function () {
 
 btn2.addEventListener('click', function () {
   if (test === 2) {
-    str.textContent = 'Wow Sarah, you are great!';
+    str.textContent = 'Wow , you are great!';
     score++;
     currentScore.textContent = `Current Score = ${score}`;
     console.log(score);
