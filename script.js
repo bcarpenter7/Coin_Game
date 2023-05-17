@@ -57,10 +57,11 @@ allBtns.addEventListener('click', function () {
   }
 });
 
-//// When you choose the right coin, score updated, success message, highscore updated
-const success = function () {
+//// When you choose the right coin, score updated, success message, highscore updated, takes in 'btn' so that it does not show that particular's button's number through the coin when they win. Looks bad.
+const success = function (btn) {
   str.textContent = 'Good job!';
   score++;
+  btn.textContent = '';
   currentScore.textContent = `Current Score = ${score}`;
   if (score > highScoreValue) {
     highScoreValue = score;
@@ -84,15 +85,15 @@ const failure = function () {
 
 //// CODE THAT PRINTS WINNER!
 btn1.addEventListener('click', function () {
-  test === 1 ? success() : failure();
+  test === 1 ? success(btn1) : failure();
 });
 
 btn2.addEventListener('click', function () {
-  test === 2 ? success() : failure();
+  test === 2 ? success(btn2) : failure();
 });
 
 btn3.addEventListener('click', function () {
-  test === 3 ? success() : failure();
+  test === 3 ? success(btn3) : failure();
 });
 
 ///Resetting the game
@@ -106,11 +107,10 @@ reset.addEventListener('click', function () {
   btn1.classList.remove('hidden');
   btn2.classList.remove('hidden');
   btn3.classList.remove('hidden');
+  btn1.textContent = '1';
+  btn2.textContent = '2';
+  btn3.textContent = '3';
   reset.style.opacity = 0;
   head.textContent = "It's all luck!";
   test = Math.floor(Math.random() * 3) + 1;
 });
-
-/// Highscore
-
-// currentScore.textContent = `Current Score = ${score}`;
