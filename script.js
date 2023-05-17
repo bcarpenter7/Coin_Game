@@ -57,12 +57,13 @@ allBtns.addEventListener('click', function () {
   }
 });
 
-//// When you choose the right coin, score updated, success message, highscore updated, takes in 'btn' so that it does not show that particular's button's number through the coin when they win. Looks bad.
+//// When you choose the right coin, score updated, success message, highscore updated, takes in 'btn' so that it does not show that particular's button's number through the coin when they win. Looks bad. 'Test' variable turns to 0 to prevent clicking the coin after winning to get more points
 const success = function (btn) {
   str.textContent = 'Good job!';
   score++;
   btn.textContent = '';
   currentScore.textContent = `Current Score = ${score}`;
+  test = 0;
   if (score > highScoreValue) {
     highScoreValue = score;
     highScore.textContent = `Highscore = ${highScoreValue}`;
@@ -85,17 +86,29 @@ const failure = function () {
   }
 };
 
-//// CODE THAT PRINTS WINNER!
+//// CODE THAT PRINTS WINNER! 'Test' is random number picked. 'Test' is 0 after the success message goes and prevents clicking the option again to get free points
 btn1.addEventListener('click', function () {
-  test === 1 ? success(btn1) : failure();
+  if (test === 0) {
+    return;
+  } else {
+    test === 1 ? success(btn1) : failure();
+  }
 });
 
 btn2.addEventListener('click', function () {
-  test === 2 ? success(btn2) : failure();
+  if (test === 0) {
+    return;
+  } else {
+    test === 2 ? success(btn2) : failure();
+  }
 });
 
 btn3.addEventListener('click', function () {
-  test === 3 ? success(btn3) : failure();
+  if (test === 0) {
+    return;
+  } else {
+    test === 3 ? success(btn3) : failure();
+  }
 });
 
 ///Resetting the game

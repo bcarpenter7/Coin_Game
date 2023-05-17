@@ -35,22 +35,22 @@ p {
   position: absolute;
   width: 200px;
   height: 150px;
-  top: 320px;
+  top: 370px;
   z-index: 10;
 }
 
 #coinOne {
-  left: 390px;
+  left: 400px;
   opacity: 0;
 }
 
 #coinTwo {
-  left: 600px;
+  left: 620px;
   opacity: 0;
 }
 
 #coinThree {
-  left: 810px;
+  left: 840px;
   opacity: 0;
 }
 
@@ -60,7 +60,7 @@ p {
   height: 200px;
   font-family: sans-serif;
   position: absolute;
-  top: 300px;
+  top: 350px;
   /* cursor: pointer; */
   z-index: 20;
 }
@@ -71,17 +71,17 @@ p {
 }
 
 .btnOne {
-  left: 390px;
+  left: 400px;
   opacity: 1;
 }
 
 .btnTwo {
-  left: 600px;
+  left: 620px;
   opacity: 1;
 }
 
 .btnThree {
-  left: 810px;
+  left: 840px;
   opacity: 1;
 }
 
@@ -100,7 +100,7 @@ p {
 #highScore {
   font-size: 30px;
   position: absolute;
-  left: 1050px;
+  left: 1150px;
   font-family: Helvetica, sans-serif;
   margin-top: -75px;
   background: white;
@@ -111,7 +111,7 @@ p {
 #currentScore {
   font-size: 30px;
   position: absolute;
-  left: 1050px;
+  left: 1150px;
   font-family: Helvetica, sans-serif;
   margin-top: -15px;
   background: white;
