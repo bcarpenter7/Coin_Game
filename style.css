@@ -27,40 +27,45 @@ p {
   font-family: Helvetica, sans-serif;
 }
 
+#head {
+  position: absolute;
+  left: 42%;
+}
+
 .cards {
   opacity: 1;
 }
 
 .allCoins {
   position: absolute;
-  width: 200px;
-  height: 150px;
-  top: 370px;
+  width: 20%;
+  height: 25%;
+  top: 55%;
   z-index: 10;
 }
 
 #coinOne {
-  left: 400px;
+  left: 22%;
   opacity: 0;
 }
 
 #coinTwo {
-  left: 620px;
+  left: 42%;
   opacity: 0;
 }
 
 #coinThree {
-  left: 840px;
+  left: 62%;
   opacity: 0;
 }
 
 .allBtns {
   font-size: 40px;
-  width: 200px;
-  height: 200px;
+  width: 17%;
+  height: 35%;
   font-family: sans-serif;
   position: absolute;
-  top: 350px;
+  top: 55%;
   /* cursor: pointer; */
   z-index: 20;
 }
@@ -71,17 +76,17 @@ p {
 }
 
 .btnOne {
-  left: 400px;
+  left: 22%;
   opacity: 1;
 }
 
 .btnTwo {
-  left: 620px;
+  left: 42%;
   opacity: 1;
 }
 
 .btnThree {
-  left: 840px;
+  left: 62%;
   opacity: 1;
 }
 
