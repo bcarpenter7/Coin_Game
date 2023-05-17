@@ -11,37 +11,59 @@
       href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap"
       rel="stylesheet"
     />
-    <h1>Shell Game</h1>
-    <h2 id="head">It's all luck!</h2>
-    <h3 id="highScore">Highscore = 0</h3>
-    <h3 id="currentScore">Current Score = 0</h3>
   </head>
-
+  <div class="container">
   <body class="general">
+    <div class="title">
+            <h1>Shell Game</h1>
+    </div>
+
+    <div class="message">
+        <h2 id="head">It's all luck!</h2>
+    </div>
+   
     <div class="cards">
-      <button class="btnOne allBtns" type="button">1</button>
-      <img
+      <div class="ex1">
+        <button class="btnOne allBtns" type="button">1</button>
+        <img
         id="coinOne"
         class="allCoins"
         src="https://www.pngall.com/wp-content/uploads/5/Star-Game-Gold-Coin.png"
       />
-
-      <button class="btnTwo allBtns" type="button">2</button>
+    </div>   
+        
+    
+      <div class="ex2">
+      <button class="btnTwo allBtns" type="button">2</button> 
       <img
         id="coinTwo"
         class="allCoins"
         src="https://www.pngall.com/wp-content/uploads/5/Star-Game-Gold-Coin.png"
       />
+     
+     
+    </div>
+
+    <div class="ex3">
       <button class="btnThree allBtns" type="button">3</button>
       <img
         id="coinThree"
         class="allCoins"
         src="https://www.pngall.com/wp-content/uploads/5/Star-Game-Gold-Coin.png"
       />
-
-      <button id="reset" type="button">Press to reset</button>
+      
     </div>
 
+    <div class="scoring">
+      <h3 id="highScore">Highscore = 0</h3>
+      <h3 id="currentScore">Current Score = 0</h3>
+  </div>
+
+  <div class="reset">
+      <button id="reset" type="button" >Press to reset</button>
+  </div>
+    </div>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
