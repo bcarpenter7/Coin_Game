@@ -1,9 +1,9 @@
 'use strict';
 
 /// Variables needed
-const btn1 = document.querySelector('.one');
-const btn2 = document.querySelector('.two');
-const btn3 = document.querySelector('.three');
+const btn1 = document.querySelector('.btnOne');
+const btn2 = document.querySelector('.btnTwo');
+const btn3 = document.querySelector('.btnThree');
 const coin1 = document.getElementById('coinOne');
 const coin2 = document.getElementById('coinTwo');
 const coin3 = document.getElementById('coinThree');
@@ -15,6 +15,8 @@ const highScore = document.getElementById('high');
 const currentScore = document.getElementById('current');
 let score = 0;
 let highScoreValue = 0;
+/// Random number that chooses coin placement
+let test = Math.floor(Math.random() * 3) + 1;
 
 /// Making the option you choose light grey and the other options darker grey AND hiding the other buttons
 btn1.addEventListener('click', function () {
@@ -40,8 +42,6 @@ btn3.addEventListener('click', function () {
   btn1.classList.add('hidden');
   btn2.classList.add('hidden');
 });
-/// Random number that chooses coin placement
-let test = Math.floor(Math.random() * 3) + 1;
 
 /// Making the coin show up where "test" is
 allBtns.addEventListener('click', function () {
@@ -57,77 +57,42 @@ allBtns.addEventListener('click', function () {
   }
 });
 
+//// When you choose the right coin, score updated, success message, highscore updated
+const success = function () {
+  str.textContent = 'Good job!';
+  score++;
+  currentScore.textContent = `Current Score = ${score}`;
+  if (score > highScoreValue) {
+    highScoreValue = score;
+    highScore.textContent = `Highscore = ${highScoreValue}`;
+  }
+};
+
+//// When you choose the wrong btn, score update, failure message, highscore update
+const failure = function () {
+  str.textContent = 'Better luck next time!';
+  if (score >= highScoreValue) {
+    highScoreValue = score;
+    highScore.textContent = `Highscore = ${highScoreValue}`;
+    score = 0;
+    currentScore.textContent = `Current Score = ${score}`;
+  } else {
+    score = 0;
+    currentScore.textContent = `Current Score = ${score}`;
+  }
+};
+
 //// CODE THAT PRINTS WINNER!
 btn1.addEventListener('click', function () {
-  if (test === 1) {
-    str.textContent = 'Good job!';
-    score++;
-    currentScore.textContent = `Current Score = ${score}`;
-    console.log(score);
-    if (score > highScoreValue) {
-      highScoreValue = score;
-      highScore.textContent = `Highscore = ${highScoreValue}`;
-    }
-  } else {
-    str.textContent = 'Better luck next time!';
-    if (score >= highScoreValue) {
-      highScoreValue = score;
-      highScore.textContent = `Highscore = ${highScoreValue}`;
-      score = 0;
-      currentScore.textContent = `Current Score = ${score}`;
-    } else {
-      score = 0;
-      currentScore.textContent = `Current Score = ${score}`;
-    }
-  }
+  test === 1 ? success() : failure();
 });
 
 btn2.addEventListener('click', function () {
-  if (test === 2) {
-    str.textContent = 'Wow , you are great!';
-    score++;
-    currentScore.textContent = `Current Score = ${score}`;
-    console.log(score);
-    if (score > highScoreValue) {
-      highScoreValue = score;
-      highScore.textContent = `Highscore = ${highScoreValue}`;
-    }
-  } else {
-    str.textContent = 'Better luck next time!';
-    if (score >= highScoreValue) {
-      highScoreValue = score;
-      highScore.textContent = `Highscore = ${highScoreValue}`;
-      score = 0;
-      currentScore.textContent = `Current Score = ${score}`;
-    } else {
-      score = 0;
-      currentScore.textContent = `Current Score = ${score}`;
-    }
-  }
+  test === 2 ? success() : failure();
 });
 
 btn3.addEventListener('click', function () {
-  if (test === 3) {
-    str.textContent = 'Sarah is the best!';
-    score++;
-    currentScore.textContent = `Current Score = ${score}`;
-    console.log(score);
-    if (score >= highScoreValue) {
-      highScoreValue = score;
-      highScore.textContent = `Highscore = ${highScoreValue}`;
-    }
-  } else {
-    str.textContent = 'Better luck next time!';
-    if (score > highScoreValue) {
-      highScoreValue = score;
-      highScore.textContent = `Highscore = ${highScoreValue}`;
-      score = 0;
-      currentScore.textContent = `Current Score = ${score}`;
-    } else {
-      score = 0;
-      currentScore.textContent = `Current Score = ${score}`;
-    }
-  }
+  test === 3 ? success() : failure();
 });
 
 ///Resetting the game
