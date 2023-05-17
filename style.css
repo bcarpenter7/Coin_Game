@@ -57,7 +57,7 @@ p {
 
 .allCoins {
   width: 20%;
-  height: 75%;
+  height: 60%;
   z-index: 10;
 }
 
@@ -102,28 +102,28 @@ p {
 }
 
 #highScore {
-  font-size: 30px;
+  font-size: 25px;
   font-family: Helvetica, sans-serif;
   background: white;
-  padding: 5px;
+  padding: 5px 0px;
   border-radius: 3px;
 }
 
 #currentScore {
-  font-size: 30px;
+  font-size: 25px;
   font-family: Helvetica, sans-serif;
   background: white;
-  padding: 5px;
+  padding: 5px 0px;
   border-radius: 3px;
 }
 
 #reset {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   background: white;
   border: none;
   font-family: Helvetica, sans-serif;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 3px;
 }
 
