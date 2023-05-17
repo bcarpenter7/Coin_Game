@@ -18,34 +18,11 @@ let highScoreValue = 0;
 /// Random number that chooses coin placement
 let test = Math.floor(Math.random() * 3) + 1;
 
-/// Making the option you choose light grey and the other options darker grey AND hiding the other buttons
-btn1.addEventListener('click', function () {
-  btn1.style.opacity = 0.1;
-  btn2.style.opacity = 0.5;
-  btn3.style.opacity = 0.5;
-  btn2.classList.add('hidden');
-  btn3.classList.add('hidden');
-});
-
-btn2.addEventListener('click', function () {
-  btn1.style.opacity = 0.5;
-  btn2.style.opacity = 0.1;
-  btn3.style.opacity = 0.5;
-  btn1.classList.add('hidden');
-  btn3.classList.add('hidden');
-});
-
-btn3.addEventListener('click', function () {
-  btn1.style.opacity = 0.5;
-  btn2.style.opacity = 0.5;
-  btn3.style.opacity = 0.1;
-  btn1.classList.add('hidden');
-  btn2.classList.add('hidden');
-});
-
-/// Making the coin show up where "test" is
-allBtns.addEventListener('click', function () {
+/// Makes the coin appear based on the random number at the beginning/ after reset. Called with eventlistener.
+const coinAppear = function () {
+  console.log(test, 'test');
   if (test === 1) {
+    console.log('works');
     coin1.style.opacity = 1;
     reset.style.opacity = 1;
   } else if (test === 2) {
@@ -55,7 +32,7 @@ allBtns.addEventListener('click', function () {
     coin3.style.opacity = 1;
     reset.style.opacity = 1;
   }
-});
+};
 
 //// When you choose the right coin, score updated, success message, highscore updated, takes in 'btn' so that it does not show that particular's button's number through the coin when they win. Looks bad. 'Test' variable turns to 0 to prevent clicking the coin after winning to get more points
 const success = function (btn) {
@@ -86,27 +63,40 @@ const failure = function () {
   }
 };
 
-//// CODE THAT PRINTS WINNER! 'Test' is random number picked. 'Test' is 0 after the success message goes and prevents clicking the option again to get free points
+//// CODE THAT PRINTS WINNER! 'Test' is random number picked. coinAppear() is called to make the coin appear. Opacity is changed to hide the buttons and lighten your choice.
 btn1.addEventListener('click', function () {
+  ///First part turns your option light grey
+  btn1.style.opacity = 0.1;
+  btn2.classList.add('hidden');
+  btn3.classList.add('hidden');
   if (test === 0) {
     return;
   } else {
+    coinAppear();
     test === 1 ? success(btn1) : failure();
   }
 });
 
 btn2.addEventListener('click', function () {
+  btn2.style.opacity = 0.1;
+  btn1.classList.add('hidden');
+  btn3.classList.add('hidden');
   if (test === 0) {
     return;
   } else {
+    coinAppear();
     test === 2 ? success(btn2) : failure();
   }
 });
 
 btn3.addEventListener('click', function () {
+  btn3.style.opacity = 0.1;
+  btn1.classList.add('hidden');
+  btn2.classList.add('hidden');
   if (test === 0) {
     return;
   } else {
+    coinAppear();
     test === 3 ? success(btn3) : failure();
   }
 });
