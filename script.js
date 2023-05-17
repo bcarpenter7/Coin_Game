@@ -11,8 +11,8 @@ const allBtns = document.querySelector('.cards');
 const reset = document.getElementById('reset');
 const str = document.getElementById('head');
 const cards = document.querySelector('cards');
-const highScore = document.getElementById('high');
-const currentScore = document.getElementById('current');
+const highScore = document.getElementById('highScore');
+const currentScore = document.getElementById('currentScore');
 let score = 0;
 let highScoreValue = 0;
 /// Random number that chooses coin placement
@@ -66,12 +66,14 @@ const success = function (btn) {
   if (score > highScoreValue) {
     highScoreValue = score;
     highScore.textContent = `Highscore = ${highScoreValue}`;
+    highScore.style.background = 'yellow';
   }
 };
 
 //// When you choose the wrong btn, score update, failure message, highscore update
 const failure = function () {
   str.textContent = 'Better luck next time!';
+  highScore.style.background = 'white';
   if (score >= highScoreValue) {
     highScoreValue = score;
     highScore.textContent = `Highscore = ${highScoreValue}`;

@@ -97,31 +97,42 @@ p {
   display: none;
 }
 
-#high {
-  font-size: 20px;
+#highScore {
+  font-size: 30px;
   position: absolute;
   left: 1050px;
   font-family: Helvetica, sans-serif;
   margin-top: -75px;
   background: white;
-  padding: 10px;
-  border-radius: 200px;
+  padding: 5px;
+  border-radius: 3px;
 }
 
-#current {
-  font-size: 20px;
+#currentScore {
+  font-size: 30px;
   position: absolute;
   left: 1050px;
   font-family: Helvetica, sans-serif;
   margin-top: -15px;
   background: white;
-  border-radius: 2%;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 #reset {
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: bold;
   position: absolute;
+  background: white;
+  border: none;
   left: 75px;
   font-family: Helvetica, sans-serif;
   margin-top: -75px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#reset:hover {
+  cursor: pointer;
+  box-shadow: 2px 5px 5px black;
 }
