@@ -151,13 +151,7 @@ p {
 }
 
 .general {
-  background: blue;
-}
-
-@media only screen and (min-width:  769px){
-  .general {
-    background: rgb(45, 44, 44);
-  }
+  background: rgb(45, 44, 44);
 }
 
 .hidden {
