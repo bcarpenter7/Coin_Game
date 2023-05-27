@@ -108,7 +108,7 @@ p {
 
 @media only screen and (min-width: 400px){
   .message {
-    margin-top: 0px;
+    font-size: 200%;
   }
 
 }

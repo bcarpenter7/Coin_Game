@@ -1,5 +1,5 @@
 'use strict';
-
+ 
 /// Variables needed
 const btn1 = document.querySelector('.btnOne');
 const btn2 = document.querySelector('.btnTwo');
